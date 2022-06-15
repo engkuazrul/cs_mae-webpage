@@ -1,0 +1,1061 @@
+main.ssl-customer-landing-wrapper
+	overflow-x hidden
+	// === intro ==== //
+	section.intro-section
+		position relative
+		padding 35px 0 45px
+		background #FFDE00
+		+from-width($tablet_breakpoint)
+			padding 60px 0 90px
+		+from-width($desktop_breakpoint)
+			padding 90px 0 110px
+			
+		background url('../images/bg-top-banner.png') no-repeat #ffde01
+		background-size cover
+		background-position center center
+
+		.visual-banner
+			z-index 2
+			position relative
+			
+		.headline
+			display flex
+			align-items center
+			justify-content center
+			position relative
+			z-index 2
+			h2
+				+below($desktop_breakpoint)
+					font-size 18px
+					line-height 28px
+			
+		.period-box	
+			position relative
+			z-index 2	
+			p
+				+below($desktop_breakpoint)
+					font-size 20px
+					line-height 28px
+
+	// ==== scan pay section ==== //
+	section.scan-pay
+		padding 60px 0
+		background $yellow
+		border-bottom-left-radius 40px
+		border-bottom-right-radius 40px
+		overflow hidden
+		+from-width($desktop_breakpoint)
+			border-bottom-left-radius 120px
+			border-bottom-right-radius 120px
+			padding 100px 0 50px
+			
+		.content-wrapper
+			position relative
+			
+		.star
+			position absolute
+			max-width 60px
+			+from-width($default_breakpoint)
+				max-width 100px
+			&.left
+				left 0px
+				top 180px
+				+from-width($tablet_breakpoint)
+					left -40px
+				+from-width($default_breakpoint)
+					left -100px
+					top 150px
+				
+			&.right
+				bottom -10px
+				right 0px
+				+from-width($tablet_breakpoint)
+					bottom -50px
+					right -30px
+				+from-width($default_breakpoint)
+					right -100px
+
+		ul.carousel-scan-pay
+			list-style none
+			margin 30px auto 0
+			padding 0
+			justify-content space-between
+			display block
+			+from-width($desktop_breakpoint)
+				display flex
+				margin 60px auto
+			.card
+				flex 0 1 27%
+				background $base
+				border-radius 40px
+				margin-bottom 40px
+				text-align center
+				padding 10px 20px 30px
+				+below($desktop_breakpoint)
+					//max-width 300px
+					margin 0 10px
+					padding-bottom 60px
+					min-height 320px
+				+below(600px)
+					padding 10px 20px 20px
+				
+				.visual
+					margin 0 auto
+					max-width 260px
+					+from-width($tablet_breakpoint)
+						max-width 230px
+						
+					img
+						margin 0 auto
+						
+				p
+					padding 0
+					margin 0
+					font-size 14px
+					line-height 20px
+					+from-width($tablet_breakpoint)
+						font-size 16px
+						padding 0 20px
+						
+		.slick-dots
+			margin 20px 0 0
+						
+		
+	// === guideline scan pay === //	
+	section.guideline-scan-pay
+		padding 50px 0 0
+		position relative
+		+from-width($desktop_breakpoint)
+			padding 100px 0 0
+		
+		.coin
+			max-width 90px
+			width 100%
+			position absolute
+			+from-width($desktop_breakpoint)
+				max-width 150px
+			+from-width($default_breakpoint)
+				max-width 200px
+
+			&.left
+				top 50%
+				left -10px
+				+from-width($desktop_breakpoint)
+					left calc(50% - 620px)
+					top 120px
+				+from-width($default_breakpoint)
+					left calc(50% - 670px)
+					top 70px
+				+below($desktop_breakpoint)
+					z-index 2
+				
+			&.right
+				bottom -50px
+				right 0
+				+from-width($desktop_breakpoint)
+					right calc(50% - 630px)
+				+from-width($default_breakpoint)
+					right calc(50% - 680px)
+				+below($desktop_breakpoint)
+					z-index 2
+				
+		.headline
+			p
+				margin 10px auto 0
+				+from-width($desktop_breakpoint)
+					font-size 20px
+					line-height 28px
+					
+		.step-container
+			background $orange
+			border-radius 25px
+			color $global_white
+			padding 0px 20px 90px
+			margin 30px 0
+			position relative
+			z-index 1
+			+from-width($desktop_breakpoint)
+				border-radius 80px
+				padding 0 40px 30px 60px
+								
+			.tab--wrapper
+				position relative
+				padding-top 30px
+				padding-bottom 14px
+				text-align center
+				+from-width($desktop_breakpoint)
+					padding-top 100px
+					padding-bottom 0
+					padding-left calc(50% - 110px)
+					text-align left
+				
+			.tabs-for-step
+				+below(370px)
+					margin-right 20px
+					
+			// tab navi
+			// .tab-navi
+			// 	background $global_white
+			// 	display flex
+			// 	text-align center
+			// 	border-radius 25px
+			// 	overflow hidden
+			// 	max-width 200px
+			// 	margin 0px auto 20px
+			// 	+from-width($desktop_breakpoint)
+			// 		max-width 240px
+			// 		margin 30px 0
+			// 	a
+			// 		color $dark_yellow
+			// 		background $base
+			// 		width 50%
+			// 		padding 10px 10px
+			// 		border-radius 25px
+			// 		font-weight 700
+			// 		+below($desktop_breakpoint)
+			// 			flex 0 1 48%
+			// 		&.active
+			// 			background $yellow
+			// 			color $black
+			// 			text-align center
+			// 			box-shadow 0px 2px 3px rgba(0, 0, 0, 0.15)
+						
+			.tab-switch
+				position relative
+				&:after
+					content ""	
+					position absolute
+					width 50%
+					top 0
+					transition left cubic-bezier(.88, -.35, .565, 1.35) .4s
+					border-radius 25px
+					box-shadow 0px 2px 3px rgba(0, 0, 0, 0.15)
+					background-color $yellow
+					height 100%
+					z-index 0
+				&.left
+					&:after
+						left 0
+						
+				&.right
+					&:after
+						left 50%
+						
+				.tab
+					display inline-block
+					width 49%
+					padding 10px 0
+					z-index 1
+					position relative
+					cursor pointer
+					transition color 200ms
+					user-select none
+					text-align center
+					font-weight 700
+					color $dark_yellow
+					
+					&.active
+						color $black
+						
+			.tab-navi-wrapper
+				border-radius 30px
+				background-color $global_white
+				max-width 240px
+				margin 30px auto
+				width 100%
+				+from-width($desktop_breakpoint)
+					margin 30px 0
+					
+				
+			// visual	
+			.carousel-for,
+			.carousel-for-receive
+				max-width 370px
+				max-height 570px
+				width 100%
+				+from-width($desktop_breakpoint)
+					margin-top -25%
+				+below($desktop_breakpoint)
+					margin 0 auto
+					order 2
+				+below(370px)
+					margin 0 auto 0 -7px
+				.visual
+					+from-width($desktop_breakpoint)
+						width 370px!important
+						max-width 370px
+						margin-top 15px
+					+below($desktop_breakpoint)
+						min-width 370px!important
+					+below(500px)
+						min-width 300px!important
+						
+						
+					p
+						margin 20px 0 10px
+						text-align center
+						+from-width($desktop_breakpoint)
+							margin 20px 0 0
+						
+					img
+						+below($desktop_breakpoint)
+							margin 0 auto
+						//+below(500px)
+							//margin 0
+							//width 100%
+								
+				.slick-track,
+				.slick-list
+					+from-width($desktop_breakpoint)
+						max-height 570px
+					+below($desktop_breakpoint)
+						min-width 300px
+						min-height 650px
+						max-height 650px
+						transform none
+						margin 0 auto
+
+			// nav	
+			ol
+				list-style-type none
+				padding 0
+				margin 0
+				max-width 550px
+				width 100%
+				+below($desktop_breakpoint)
+					margin 0 auto
+					width 250px
+				li
+					color #000
+					border-radius 34px
+					position relative
+					counter-increment custom
+					box-sizing border-box
+					width 50px!important
+					margin 0 20px
+					+from-width($desktop_breakpoint)
+						width 500px!important
+						max-width 500px
+						display flex
+						align-items center
+						max-height 68px
+						margin 0 0 40px
+						padding 8px 15px
+
+					&.slick-current
+						+from-width($desktop_breakpoint)
+							background $base
+						&:before
+							background $yellow
+							color $black
+							border 4px solid $global_white
+						p
+							color $black
+								
+					
+					&:first-child
+						counter-reset custom
+						
+						
+					&:last-child
+						&:after
+							display none
+						
+					&:before
+						content counter(custom) " " 
+						border-radius 50%
+						background $base
+						color $dark_yellow
+						font-weight 700
+						margin-right 25px
+						padding 14px 20px
+						text-align center
+						+below($desktop_breakpoint)
+							display block
+							width 43px
+							padding 10px 0
+							
+					&:after
+						content ""
+						height 27px
+						background $global_white
+						width 1px
+						display block
+						position absolute
+						right -30px
+						top 50%
+						+from-width($desktop_breakpoint)
+							bottom -35px
+							left 40px
+							right unset
+							top unset
+						
+						+below($desktop_breakpoint)
+							width 20px
+							height 1px
+						
+					p
+						margin 0
+						display none
+						vertical-align middle
+						color $global_white
+						+from-width($desktop_breakpoint)
+							display inline-block
+				
+				.slick-track,
+				.slick-list
+					display flex
+					+from-width($desktop_breakpoint)
+						flex-direction column	
+						
+					+below($desktop_breakpoint)
+						align-items center
+						min-height 100%!important
+							
+						
+
+	//=== merchants ====/
+	section.merchants-wrapper
+		margin 70px 0 0
+		position relative
+		
+		.content-wrapper
+			+below($desktop_breakpoint)
+				padding 0
+		
+		.element
+			position absolute
+			&.heart
+				top 2%
+				left 0
+				max-width 50px
+				+from-width($desktop_breakpoint)
+					top 7%
+					left calc(50% - 620px)
+					max-width 130px
+				+from-width($lg_breakpoint)
+					left calc(50% - 640px)
+					max-width 160px
+					
+			&.grocery
+				top 30%
+				right -5px
+				max-width 100px
+				+from-width($desktop_breakpoint)
+					right calc(50% - 630px)
+					max-width 150px
+					top calc(50% - 650px)
+				+from-width($default_breakpoint)
+					max-width 200px
+					right calc(50% - 680px)
+				+from-width($lg_breakpoint)
+					max-width 250px
+					right calc(50% - 720px)
+					top calc(50% - 700px)
+
+			&.camera
+				right 0
+				max-width 100px
+				bottom 50px
+				+from-width($tablet_breakpoint)
+					max-width 160px
+					bottom 10%
+				+from-width($desktop_breakpoint)
+					right calc(50% - 600px)
+				+from-width($default_breakpoint)
+					max-width 230px
+					right calc(50% - 700px)
+					bottom 8%
+				+from-width($lg_breakpoint)
+					max-width 270px
+					right calc(50% - 740px)
+					bottom 9%
+
+
+			&.bag
+				max-width 100px
+				left -20px
+				bottom 36%
+				+from-width($desktop_breakpoint)
+					bottom calc(50% - 450px)
+					left calc(50% - 640px)
+					max-width 150px
+				+from-width($default_breakpoint)
+					bottom calc(50% - 500px)
+					left calc(50% - 700px)
+					max-width 180px
+				+from-width($lg_breakpoint)
+					max-width 260px
+					left calc(50% - 800px)
+				
+			&.orange-bag
+				max-width 100px
+				left -20px
+				bottom 34%
+				+from-width($desktop_breakpoint)
+					bottom calc(50% - 850px)
+					left calc(50% - 640px)
+					max-width 150px
+				+from-width($default_breakpoint)
+					bottom calc(50% - 850px)
+					left calc(50% - 680px)
+					max-width 190px
+				+from-width($lg_breakpoint)
+					max-width 260px
+					left calc(50% - 730px)
+					bottom calc(50% - 950px)
+				
+				
+		.roof
+			margin 0 auto
+			max-width 1330px
+			width 100%
+			img
+				width 100%
+			
+			
+		.merchant--base
+			background $pink
+			padding 60px 0px 30px
+			color $global_white
+			border-bottom-left-radius 27px
+			border-bottom-right-radius 27px
+			margin -10% 10px 0
+			+from-width($tablet_breakpoint)
+				margin -10% 40px 0
+				padding 100px 0 60px
+			+from-width($desktop_breakpoint)
+				padding 120px 20px 80px
+				margin -10% auto 0
+				border-bottom-left-radius 100px
+				border-bottom-right-radius 100px
+				
+				
+			
+			.headline
+				max-width 700px
+				margin 0 auto
+				padding 0 20px
+				+from-width($tablet_breakpoint)
+					padding 0
+				
+			.latest-merchant
+				padding 0 20px
+				+from-width($tablet_breakpoint)
+					padding 0 35px
+				+from-width($desktop_breakpoint)
+					padding 0
+				.title-m
+					max-width 450px
+					width 100%
+					margin 40px auto 10px
+					+from-width($tablet_breakpoint)
+						margin 50px auto 10px
+
+
+				.box-merchant
+					background $yellow
+					max-width 900px
+					margin 0 auto
+					color $black
+					padding 25px 20px 0
+					border-radius 30px
+					box-shadow inset 0px 0px 10px rgba(255, 255, 255, 0.15)
+					border 6px solid #FFF5B2
+					position relative
+					+from-width($tablet_breakpoint)
+						padding 45px 0
+						border-radius 70px
+					
+					.content-merchant
+						max-width 700px
+						margin 0 auto
+						
+					.light-visual
+						absolute bottom -30px left -10px
+						width 110%
+						+from-width(600px)
+							width 100%
+						+from-width($desktop_breakpoint)
+							width 115%
+							left -60px
+								
+					ul
+						justify-content space-between
+						margin-top 30px
+						padding 0
+						flex-direction row
+						
+						li
+							list-style-type none
+							padding 0
+							margin 0 0 20px
+							flex 0 1 46%
+							+from-width($tablet_breakpoint)
+								flex 0 1 23%
+								margin 0
+
+			.merchant-list
+				padding 50px 5px 0
+				+from-width($tablet_breakpoint)
+					padding 100px 0 0
+					
+				.title
+					padding 0 20px
+				ul
+					list-style-type none
+					padding 0
+					margin 20px auto 0
+					max-width 920px
+					width 100%
+					+from-width($tablet_breakpoint)
+						margin 40px auto 0
+					li
+						margin-bottom 10px
+						+from-width($desktop_breakpoint)
+							margin-bottom 70px
+						&:last-child
+							margin 0
+							
+						img
+							width 100%
+					
+
+	section.promotion-ongoing
+		margin 50px 0 0
+		+from-width($desktop_breakpoint)
+			margin 90px 0 0
+		h2
+			margin-bottom 20px!important
+			+from-width($desktop_breakpoint)
+				margin-bottom 35px!important
+			
+		.content-wrapper
+			padding 0!important
+			+from-width($desktop_breakpoint)
+				padding 0 20px!important
+			
+		.box-promotion
+			padding 0 0 70px
+			background url('../images/raya-banner-mob.png') no-repeat
+			background-size cover
+			+from-width($desktop_breakpoint)
+				padding 50px 0 0
+				background url('../images/raya-banner.png') no-repeat
+				background-size cover
+				min-height 350px
+			
+		._row
+			justify-content space-between
+			align-items center
+			.content
+				flex 0 1 46%
+				color $global_white
+				order 2
+				text-align center
+				padding 0 20px
+				margin-top -60px
+				+from-width($desktop_breakpoint)
+					//order 1
+					text-align left
+					padding 0 0 0 20px
+					margin 0
+					order unset
+					
+				h3
+					+below($tablet_breakpoint)
+						font-size 22px
+						line-height 28px
+				p
+					margin 20px 0 30px
+					letter-spacing -0.003em
+					font-size 18px
+					line-height 28px
+				
+			.visual-cashback
+				flex 0 1 50%
+				
+				
+		a.btn--primary
+			margin 0 auto
+			+from-width($desktop_breakpoint)
+				margin 0
+
+	section.peek-promotion
+		padding 50px 0
+		+from-width($tablet_breakpoint)
+			padding-top 70px
+			padding-bottom 60px
+		
+		.content-wrapper
+			position relative
+			
+		.emoji
+			position absolute
+			max-width 70px
+			top -50px
+			left 0px
+			+from-width($tablet_breakpoint)
+				left 30px
+				max-width 120px
+			
+		.star
+			position absolute
+			max-width 60px
+			+from-width($default_breakpoint)
+				max-width 100px
+			&.left
+				left 0px
+				top 100px
+				max-width 20px
+				
+			&.right
+				bottom 0px
+				right 50px
+				+from-width($default_breakpoint)
+					right -100px
+				
+		.headline
+			margin-bottom 35px
+			
+
+		.slider-promotions
+			max-width 740px
+			margin 0 auto
+			.cards
+				margin 0 20px
+				width 100%
+				+from-width($desktop_breakpoint)
+					max-width 330px
+				
+				img
+					margin 0 auto
+					
+				p
+					font-weight 700
+					
+
+			.slick-dots
+				li
+					button
+						&:before
+							border-color $yellow
+						
+					&.slick-active
+						button
+							&:before
+								background $yellow
+								
+				
+
+	section.wait-more-container
+		background $pink
+		padding 50px 0 80px
+		color $global_white
+		border-radius 35px
+		box-sizing border-box
+		position relative
+		+from-width($desktop_breakpoint)
+			padding 130px 0 200px
+			border-radius 120px 120px 80px 80px
+			
+		.headline
+			text-align center
+			+from-width($desktop_breakpoint)
+				text-align left
+				
+		.element
+			position absolute
+			max-width 220px
+			+from-width($lg_breakpoint)
+				max-width 300px
+			&.qr-code
+				top -100px
+				left 5%
+				display none
+				+from-width($desktop_breakpoint)
+					display block
+				+from-width($lg_breakpoint)
+					left 10%
+					top -120px
+			&.scanner
+				bottom 20px 
+				right 50px
+				z-index 1
+				display none
+				+from-width($desktop_breakpoint)
+					display block
+				+from-width($lg_breakpoint)
+					bottom 0
+		
+		ul
+			list-style none
+			padding 0
+			margin 0
+			justify-content space-between
+			display block
+			+from-width($desktop_breakpoint)
+				display flex
+			li
+				flex 0 1 32%
+				margin 0 5px 20px
+				+from-width($desktop_breakpoint)
+					margin 0 0 40px
+				.visual
+					max-width 100%
+					width 100%
+					margin 0 auto
+					+from-width($desktop_breakpoint)
+						margin-right 20px
+						max-height 191px
+					img
+						width 100%
+					
+				.content
+					background $base
+					border-radius 18px
+					p
+						margin 10px 0 0
+						color $black
+						font-size 16px
+						line-height 20px
+						font-weight 700
+						padding 12px
+						
+
+		// .slick-dots
+		// 	li
+		// 		&:last-child
+		// 			display none!important	
+					
+		iframe
+			width 100%
+			min-height 191px
+			border-radius 18px
+			overflow hidden
+				
+	section.merchant-profile-container
+		background $yellow
+		color $black
+		box-shadow 0px 4px 30px rgba(0, 0, 0, 0.2)
+		border-radius 0px 0px 25px 25px
+		position relative
+		margin-top -40px
+		padding 50px 0 0
+		+from-width($desktop_breakpoint)
+			margin-top -80px
+			padding 0
+			border-radius 0px 0px 92px 92px
+		
+		.grid
+			position relative
+			z-index 2
+			
+		.element
+			absolute top -10px left 0
+			+from-width(600px)
+				top -20px
+			+from-width($desktop_breakpoint)
+				top -40px
+			+from-width($lg_breakpoint)
+				top -50px
+			img
+				width 100%
+			
+		._row
+			align-items center
+			justify-content space-between
+			&>div
+				flex 0 1 49%
+				
+		.headline
+			text-align center
+			margin-bottom 80px
+			+from-width($desktop_breakpoint)
+				text-align left
+				margin 0
+				
+			span
+				position relative
+				overflow hidden
+				&:after
+					content ""
+					display block
+					width 160px
+					height 10px
+					background transparent url('../images/line.png') no-repeat
+					absolute right 10px bottom -10px
+					+below($desktop_breakpoint)
+						transform scale(0.8)
+						right -15px
+				
+			a
+				+below($desktop_breakpoint)
+					margin 0 auto
+					
+		.merchant-visual
+			+below($desktop_breakpoint)
+				max-width 170px
+				absolute bottom 0 right -25px
+				
+
+	section.question-container
+		padding 50px 0
+		+from-width($desktop_breakpoint)
+			padding 150px 0
+			
+		a
+			+below($desktop_breakpoint)
+				margin 0 auto
+		
+		.column
+			background $blue
+			padding 50px 0
+			margin-bottom 35px
+			position relative
+			border-radius 60px			
+			+from-width($desktop_breakpoint)
+				border-radius 90px
+				padding 145px 0
+				
+			+below($desktop_breakpoint)
+				display flex
+				flex-direction column-reverse
+			
+			&:after
+				content ""
+				display block
+				width 120px
+				height 80px
+				background transparent url('../images/promotion/right-arrow.png') no-repeat
+				absolute right 0px bottom 10px
+				+from-width($desktop_breakpoint)
+					right -35px
+				
+			&:first-child
+				.emoji
+					absolute bottom 10px right -25px
+					max-width 90px
+					z-index 2
+				&:before
+					content ""
+					display block
+					absolute left -50px top -40px
+					width 140px
+					height 130px
+					background transparent url('../images/think-emoji.png') no-repeat
+					transform scale(0.5)
+					+from-width($tablet_breakpoint)
+						right 70px
+						top -70px
+						left unset
+						transform none
+						
+				a
+					display block!important
+					position relative
+					z-index 2
+				
+					
+			&:last-child
+				margin-bottom 20px
+				padding 50px 0
+				+from-width($desktop_breakpoint)
+					padding 160px 0
+					margin-bottom 35px
+				&:after
+					background transparent url('../images/promotion/left-arrow.png') no-repeat
+					left -15px
+					right auto
+					+from-width($desktop_breakpoint)
+						left -30px
+					
+				&:before
+					content ""
+					display block
+					width 200px
+					height 160px
+					background transparent url('../images/happy-emoji.png') no-repeat
+					absolute right 0px bottom -10px
+					+from-width($desktop_breakpoint)
+						right -75px
+					
+					+below($desktop_breakpoint)
+						transform scale(0.5) rotate(-40deg)
+						left -80px
+						top 0
+					
+					
+			.headline
+				color $global_white
+				max-width 500px
+				text-align center
+				position relative
+				padding 0 35px
+				margin 0 auto
+				+from-width($desktop_breakpoint)
+					padding-left calc(50% - 30px)
+					padding-right 0
+					absolute top 50%
+					transform translateY(-50%)
+					text-align left
+					margin 0
+					
+				p
+					margin 15px 0 30px
+					
+
+				a
+					display none
+					+from-width($desktop_breakpoint)
+						display block
+				
+			.visual-phone
+				max-width 510px
+				margin 0 auto
+				+from-width($desktop_breakpoint)
+					absolute top -95% left -30px
+					margin 0
+					
+
+				a
+					display block
+					margin 30px auto 0
+					+from-width($desktop_breakpoint)
+						display none
+					
+
+		.notice
+			margin 0
+			+from-width($desktop_breakpoint)
+				font-size 18px
+				line-height 28px
+				
+			a
+				text-decoration underline
+				
+
+	section.app-wrapper
+		background $yellow
+		border-radius 35px 35px 0 0
+		padding 60px 0 50px
+		+from-width($tablet_breakpoint)
+			border-radius 92px 92px 0 0
+			padding 100px 0
+		ul
+			list-style-type none
+			padding 20px 0 0
+			margin 0
+			justify-content center
+			flex-direction row
+			li
+				margin 0 5px
+				+below($tablet_breakpoint)
+					flex 0 1 49%
+					margin 0
+				.visual
+					+from-width($desktop_breakpoint)
+						max-width 200px
+				
+
+	

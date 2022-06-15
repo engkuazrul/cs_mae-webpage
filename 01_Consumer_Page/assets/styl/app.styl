@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Import / Vendor */
+@import '../css/vendor/*.css'
+
+normalize-css()
+
+/* Disable vendor prefixing for nib() */
+flex-version = flex
+support-for-ie = false
+vendor-prefixes = official
+
+/* Variable/Settings */
+@import 'global/_variables.styl'
+@import 'global/*.styl'
+
+/* Modules */
+@import 'modules/*.styl'
+
+body
+	font-family 'Lato'
+	font-weight 400
+	font-size 20px
+	-webkit-font-smoothing antialiased
+	-moz-font-smoothing antialiased
+	margin 0
+	padding 0
+	color $black
+	box-sizing border-box
+	overflow-x hidden
+	
+
+main.ssl-customer-landing-wrapper
+	background-color $base
+	
+	img
+		max-width 100%
+		display block
+
+	a
+		text-decoration none
+		color $black
+		
+		&.btn--primary,
+		&.btn--secondary
+			background $yellow
+			color $black
+			font-size 16px
+			line-height 22px
+			transition 0.3s ease-in-out
+			font-weight 700
+			max-width 160px
+			padding 12px 0
+			border-radius 50px
+			display block
+			text-align center
+			+from-width($desktop_breakpoint)
+				max-width 220px
+				padding 15px 0
+				font-size 18px
+			&:hover
+				background-color $white
+				color $black
+				
+		&.btn--secondary
+			background $white
+			
+		&.link
+			text-decoration underline
+			color $black
+			
+
+	.mob-hide
+		display none
+		+from-width($desktop_breakpoint)
+			display block
+			
+	.mob-show
+		display block
+		+from-width($desktop_breakpoint)
+			display none	
+
+	.content-wrapper
+		center(1060px, $pad:20px)
+
+
+	h2
+		font-weight 900
+		font-size 24px
+		line-height 30px
+		margin 0
+		+from-width($desktop_breakpoint)
+			font-size 36px
+			line-height 44px
+	
+	h3
+		font-weight 700
+		font-size 24px
+		line-height 28px
+		margin 0
+		+from-width($desktop_breakpoint)
+			font-size 26px
+			line-height 28px
+			
+	p
+		font-weight 400
+		font-size 16px
+		line-height 24px
+		+from-width($desktop_breakpoint)
+			font-size 20px
+			line-height 28px
+			
+		strong
+			font-weight 700
+			
+	.text-center
+		text-align center
+	
+	.text-left
+		text-align left
+		
+
+	
+
+
+		
+			
+
+
